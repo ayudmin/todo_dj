@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-4 offset-4 mt-3">
+    <a href="{% url 'todos:home' %}" class="btn btn-secondary">Go Back</a>
+  <h2>Update Todo</h2>
+  <form method="POST">
+      {% csrf_token %}
+          {{ form.as_p }}
+      <button class="btn btn-primary" type="submit">Update</button>
+  </form>
+</div>
+{% endblock content %}
