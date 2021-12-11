@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block home %}
+<div class="text-center">
+    This is the homepage
+    <p>{{ text }}</p>
+    <a href="{% url 'todos:list' %}">Todos</a>
+</div>
+{% endblock home %}
